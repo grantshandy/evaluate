@@ -1,4 +1,4 @@
-import init, {eval_expression} from './wasm/wasm.js';
+import init, {eval_expression} from './evaluate.js';
 
 const inputBox = document.getElementById("inputId");
 const resultText = document.getElementById("result");
