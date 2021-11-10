@@ -35,8 +35,8 @@ jobs:
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.5
       with:
-        clean: true
-        clean-exclude: out/evaluate_bg.wasm out/evaluate.js
+        clean: false
+        # clean-exclude: out/evaluate_bg.wasm out/evaluate.js
         single-commit: true
         branch: gh-pages
         folder: out
