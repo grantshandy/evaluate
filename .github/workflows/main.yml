@@ -31,12 +31,12 @@ jobs:
       
     - name: Expose Filesystem For Debugging
       run: find .
+    
+    - name: Delete Gitignore
+      run: rm -rf ./out/.gitignore
  
     - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@4.1.5
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        clean: false
-        # clean-exclude: out/evaluate_bg.wasm out/evaluate.js
-        single-commit: true
-        branch: gh-pages
-        folder: out
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./out
